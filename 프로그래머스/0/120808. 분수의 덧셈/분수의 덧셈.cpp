@@ -7,7 +7,7 @@ vector<int> solution(int numer1, int denom1, int numer2, int denom2) {
     vector<int> answer;
     int top1 = numer1 * denom2;
     int top2 = numer2 * denom1;
-    int top = a + b;
+    int top = top1 + top2;
     
     int bottom = denom1 * denom2;
     for(int i=2;i<=1000;i++)
