@@ -10,18 +10,13 @@ int solution(vector<int> array) {
     int cnt=0;
     int mxcount=0;
     
-    for(int i=0;i<1000;i++)
+    for(int i=0;i<size(array);i++)
     {
-        for(int j=0;j<size(array);j++)
-        {
-            if(i==array[j])
-            {
-                count[i]++;
-            }
-        }
+        count[array[i]]++;
     }
     for(int i=0;i<1000;i++)
     {
+        if(count[i]==0) continue;
         mx=max(mx,count[i]);
         if(mx == count[i]) 
         {
@@ -30,7 +25,8 @@ int solution(vector<int> array) {
         
     }
     for(int i=0;i<1000;i++)
-    {
+    {   
+        if(count[i]==0) continue;
         if(mx==count[i])
         {
             cnt++;
