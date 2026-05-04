@@ -20,9 +20,12 @@ string solution(string letter) {
     stringstream ss(letter);
     string code;
 
-    while (ss >> code) {
-        for (int i = 0; i < morse.size(); i++) {
-            if (code == morse[i].first) {
+    while (ss >> code) 
+    {
+        for (int i=0;i<morse.size();i++) 
+        {
+            if (code == morse[i].first) 
+            {
                 answer += morse[i].second;
                 break;
             }
