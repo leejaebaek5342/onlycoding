@@ -4,9 +4,6 @@
 
 using namespace std;
 
-bool compare(int a, int b) {
-    return a > b;
-}
 
 vector<int> solution(vector<int> emergency) {
     vector<int> copy;
@@ -19,7 +16,7 @@ vector<int> solution(vector<int> emergency) {
         copy.push_back(emergency[i]);
     }
     
-    sort(copy.begin(),copy.end(),compare);
+    sort(copy.rbegin(),copy.rend());
     
     
     for(int i=0;i<size(emergency);i++)
