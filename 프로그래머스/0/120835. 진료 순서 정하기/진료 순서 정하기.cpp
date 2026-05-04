@@ -6,15 +6,9 @@ using namespace std;
 
 
 vector<int> solution(vector<int> emergency) {
-    vector<int> copy;
-    vector<int> answer;
+    vector<int> copy = emergency;
+    vector<int> answer(size(emergency),0);
     
-    answer.resize(size(emergency),0);
-    
-    for(int i=0;i<size(emergency);i++)
-    {
-        copy.push_back(emergency[i]);
-    }
     sort(copy.rbegin(),copy.rend());
     
     for(int i=0;i<size(emergency);i++)
