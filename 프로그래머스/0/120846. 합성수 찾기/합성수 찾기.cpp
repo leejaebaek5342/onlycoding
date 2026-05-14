@@ -15,12 +15,12 @@ int solution(int n) {
             if (i % j == 0) 
             {
                 cnt++;
+                if(cnt == 3)
+                {
+                    answer++;
+                    break;
+                }
             }
-        }
-
-        if (cnt >= 3) 
-        {
-            answer++;
         }
     }
 
