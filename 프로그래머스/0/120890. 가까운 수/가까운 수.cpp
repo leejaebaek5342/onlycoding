@@ -16,7 +16,7 @@ int solution(vector<int> array, int n) {
     }
     for(int i = 0; i < size(array); i++)
     {
-        if(abs(n- array[i]) == mn)
+        if(abs(n - array[i]) == mn)
         {
             return array[i];
         }
