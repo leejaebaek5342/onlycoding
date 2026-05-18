@@ -24,7 +24,7 @@ int solution(string my_string) {
             {
                 sum += stoi(tmp);
             }
-            else if(save == '-')
+            else
             {
                 sum -= stoi(tmp);
             }
