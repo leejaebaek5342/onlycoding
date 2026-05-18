@@ -12,6 +12,7 @@ int solution(vector<string> s1, vector<string> s2) {
             if(s1[i] == s2[j])
             {
                 answer++;
+                break;
             }
         }
     }
