@@ -1,26 +1,22 @@
 #include <string>
 #include <vector>
-#include <iostream>
+#include <algorithm>
 
 using namespace std;
 
 int solution(vector<vector<int>> dots) {
-    int answer = 0;
-    int x,y;
-    cout << size(dots);
-    for(int i =1; i < size(dots); i++)
+    int minx = dots[0][0];
+    int maxx = dots[0][0];
+    int miny = dots[0][1];
+    int maxy = dots[0][1];
+
+    for (int i = 1; i < dots.size(); i++)
     {
-        if(dots[0][0] != dots[i][0])
-        {
-            x = dots[i][0];
-        }
-        if(dots[0][1] != dots[i][1])
-        {
-            y = dots[i][1];
-        }
+        minx = min(minx, dots[i][0]);
+        maxx = max(maxx, dots[i][0]);
+        miny = min(miny, dots[i][1]);
+        maxy = max(maxy, dots[i][1]);
     }
-    x -= dots[0][0];
-    y -= dots[0][1];
-    answer = x * y;
-    return abs(answer);
+
+    return (maxx - minx) * (maxy - miny);
 }
