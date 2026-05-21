@@ -16,7 +16,6 @@ vector<int> solution(vector<string> keyinput, vector<int> board) {
     };
     for(int i = 0; i < size(keyinput); i++)
     {
-        if(answer[0] > x) continue;
         if(keyinput[i] == "right" || keyinput[i] == "left")
         {
             if(abs(answer[0] + count[keyinput[i]]) <= x)
@@ -32,8 +31,5 @@ vector<int> solution(vector<string> keyinput, vector<int> board) {
             }
         }
     }
-    
-    
-    
     return answer;
 }
