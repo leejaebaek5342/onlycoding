@@ -8,7 +8,7 @@ int solution(int chicken) {
     int answer = 0;
     int coupon = 0;
     int service = 0;
-    while(coupon >= 10)
+    while(chicken >= 10)
     {
         answer += chicken / 10;
         coupon += chicken % 10;
