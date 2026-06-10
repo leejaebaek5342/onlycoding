@@ -1,0 +1,33 @@
+cat > .gitignore << 'EOF'
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VSCode
+.vscode/
+
+# C/C++ build outputs
+*.out
+*.o
+*.obj
+*.exe
+*.dSYM/
+*.so
+*.a
+*.dylib
+
+# Code Runner / temporary binaries
+a.out
+
+# CMake
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# Debug / logs
+*.log
+EOF
