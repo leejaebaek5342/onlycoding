@@ -6,38 +6,26 @@ using namespace std;
 
 int main(void)
 {
-    int N,S;
-    long long totalprice = 0;
-    int cnt1 = 0;
-    int cnt2 = 1;
+    int N, S;
     cin >> N >> S;
-    vector<int>C(N,0),Y(N,0);
-    int lprice = 0;
 
-    for(int i = 0; i < N; i++)
-    {
-        cin >> C[i] >> Y[i];
-    }
-    totalprice += C[0] * Y[0];
+    long long totalprice = 0;
+    long long min_price = 0;
 
-    for(int i = 1; i < N; i++)
-    {
-        lprice = min(C[cnt1] + (5 * cnt2), C[i]);
-        // cout << "count = " << lprice << '\n';
-        if(lprice == C[i])
-        {
-            totalprice += lprice * Y[i];
-            // cout << totalprice << '\n';
-            cnt1++;
-            cnt2 = 1;
+    for (int i = 0; i < N; i++) {
+        long long C, Y;
+        cin >> C >> Y;
+
+        if (i == 0) {
+            min_price = C;
+        } else {
+            min_price = min(C, min_price + S);
         }
-        else 
-        {
-            totalprice += lprice * Y[i];
-            // cout << totalprice << '\n';
-            cnt2++;
-        }
+
+        totalprice += min_price * Y;
     }
+
     cout << totalprice << '\n';
+
     return 0;
 }
